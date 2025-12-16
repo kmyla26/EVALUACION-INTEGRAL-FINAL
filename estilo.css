@@ -1,13 +1,13 @@
 .info-card {
-  background-color: #d2b48c; /* color café claro */
+  background-color: #d2b48c; 
   color: #3e2723;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
 .info-card:hover {
-  background-color: #b08968; /* más oscuro */
-  transform: translateY(-5px); /* efecto elegante */
+  background-color: #b08968; 
+  transform: translateY(-5px); 
   color: #ffffff;
 }
 
@@ -18,13 +18,13 @@
   cursor: pointer;
 }
 
-/* Mantener forma cuadrada */
+
 .img-container {
-  aspect-ratio: 1 / 1; /* CUADRADO */
+  aspect-ratio: 1 / 1; 
   overflow: hidden;
 }
 
-/* Imagen */
+
 .img-container img {
   width: 100%;
   height: 100%;
@@ -32,12 +32,12 @@
   transition: transform 0.4s ease;
 }
 
-/* Zoom */
+
 .coffee-card:hover img {
   transform: scale(1.1);
 }
 
-/* Título inferior */
+
 .coffee-title {
   background-color: #6f4e37;
   color: white;
@@ -52,31 +52,31 @@ footer {
   padding: 20px 0;
 }
 
-/* CONTENEDOR FLEX */
+
 .footer-flex {
   display: flex;
-  align-items: center;        /* MISMO NIVEL */
+  align-items: center;      
   justify-content: space-between;
 }
 
-/* IZQUIERDA */
+
 .texto-izquierda {
   margin-left: 20px;
 }
 
-/* CENTRO */
+
 .texto-centro {
   margin-left: 90px;
   text-align: center;
 }
 
-/* DERECHA */
+
 #iconos {
   display: flex;
   gap: 4px;
 }
 
-/* ICONOS */
+
 #iconos img {
   width: 80px;
   height: 80px;
@@ -87,7 +87,7 @@ footer {
   filter: brightness(1.3);
 }
 
-/* RESET TOTAL DEL ACORDEÓN */
+
 .accordion,
 .accordion-item,
 .accordion-header {
@@ -96,12 +96,12 @@ footer {
   border: 0;
 }
 
-/* ITEM PEGADO */
+
 .accordion-item {
   border-bottom: 0;
 }
 
-/* BOTÓN PEGADO */
+
 .accordion-button {
   background-color: #e0e7ff;
   color: #000;
@@ -111,23 +111,23 @@ footer {
   box-shadow: none;
 }
 
-/* BOTÓN ACTIVO */
+
 .accordion-button:not(.collapsed) {
   background-color: #c7d2fe;
 }
 
-/* QUITAR LÍNEA BLANCA */
+
 .accordion-button::after {
   margin-left: auto;
 }
 
-/* CONTENIDO */
+
 .accordion-body {
   background-color: #f8f9fa;
   padding: 0.75rem 1.25rem;
 }
 
-/* EVITA ESPACIOS FANTASMA */
+
 .accordion-collapse {
   border: 0;
 }
@@ -146,14 +146,14 @@ footer {
     overflow: hidden;
 }
 
-/* Estilo del Overlay (fondo amarillo con transparencia) */
+
 .info-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 215, 0, 0.75); /* Fondo amarillo semitransparente */
+    background: rgba(255, 215, 0, 0.75); 
     color: #000;
     display: flex;
     flex-direction: column;
@@ -166,13 +166,12 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Mostrar overlay */
+
 .info-overlay.activo {
     opacity: 1;
     visibility: visible;
 }
 
-/* Estilos del botón dentro del overlay */
 .info-overlay .cerrar-info {
     margin-top: 10px;
     padding: 8px 16px;
@@ -182,12 +181,12 @@ footer {
     cursor: pointer;
 }
 
-/* Botón "Ver información" */
+
 .ver-info {
     text-decoration: none;
 }
 
-/* Estilo para mejorar visualmente */
+
 .card-body {
     padding: 10px;
 }
@@ -222,7 +221,7 @@ footer {
 }
 
 
-/* ===== RESET TOTAL BOOTSTRAP TABS ===== */
+
 .tabs-custom.nav-tabs .nav-link {
     border: none !important;
     background: transparent !important;
@@ -233,7 +232,7 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* ===== COLORES BASE (NO AZUL) ===== */
+
 .tabs-custom .tab-combo {
     color: crimson !important;
 }
@@ -258,7 +257,7 @@ footer {
     color: slateblue !important;
 }
 
-/* ===== ACTIVO (CUADRADO + COLOR OSCURO) ===== */
+
 .tabs-custom .tab-combo.active {
     background-color: rgba(220, 20, 60, 0.25) !important;
     color: darkred !important;
@@ -289,13 +288,13 @@ footer {
     color: #2f2f8f !important;
 }
 
-/* Hover mantiene color */
+
 .tabs-custom .nav-link:hover {
     color: inherit !important;
 }
 
 
-/* Tabs colores */
+
 .tab-all.active {
   background-color: #dc3545;
   color: #fff;
@@ -316,31 +315,31 @@ footer {
   color: #000;
 }
 
-/* Badge morado */
+
 .bg-purple {
   background-color: #6f42c1;
 }
 
 .tag {
-  font-weight: 800;     /* bien negrita */
-  margin-right: 6px;   /* separación del texto */
+  font-weight: 800;    
+  margin-right: 6px;   
 }
 
-/* Colores según categoría */
 .tag.compose {
-  color: #6c757d; /* secondary */
+  color: #6c757d; 
 }
 
 .tag.bts {
-  color: #198754; /* success */
+  color: #198754;
 }
 
 .tag.machines {
-  color: #ffc107; /* warning */
+  color: #ffc107; 
 }
 
 .tab-all i {
   font-size: 0.9rem;
 }
+
 
 
