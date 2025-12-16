@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | Compose Coffee</title>
   <link rel="stylesheet" href="estilo.css">
-  <!-- Bootstrap CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
-  <!-- Favicon -->
+  
     <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon">
   <style>
     body {
@@ -29,30 +29,29 @@
       font-family: "Sekuya", system-ui;
       font-size: xxx-large;
     }
-    /* SOLO los títulos: Día, Horario y Estado */
+    
     table thead th {
-      color: #ff69b4; /* rosa */
+      color: #ff69b4; 
     }
-    /* Forzar color rosa SOLO en el header aunque sea table-dark */
+   
     table thead.table-dark th {
-      background-color: #ff69b4 !important; /* rosa */
+      background-color: #ff69b4 !important; 
     }
 
-    /* Tablets */
+    
     @media (max-width: 992px) {
         #iconos img {
             max-width: 50px;
         }
     }
 
-    /* Móviles */
+    
     @media (max-width: 768px) {
         #iconos img {
             max-width: 40px;
         }
     }
 
-    /* Pantallas muy pequeñas */
     @media (max-width: 576px) {
         #iconos img {
             max-width: 30px;
@@ -91,7 +90,7 @@
 <div class="container my-5">
   <h2 id="nosotros" class="text-center mb-4 tabs-custom">Servicio al Cliente </h2>
   <div class="row">
-    <!-- Columna izquierda: Formulario -->
+    
     <div class="col-md-6">
       <h4 class="mb-3">Formulario de Contacto</h4>
       <div class="alert alert-warning">Atención: Utiliza este formulario para consultas generales.</div>
@@ -124,7 +123,6 @@
       </form>
     </div>
 
-    <!-- Columna derecha: Horario y mapa -->
     <div class="col-md-6">
       <h4>Horarios de Atención</h4>
       <div class="table-responsive">
@@ -176,18 +174,18 @@ const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el))
 
 </script>
 
-<!-- Modal Éxito -->
+
 <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
-      <!-- Header -->
+     
       <div class="modal-header text-white" style="background-color:#426f37;">
         <h5 class="modal-title">¡Éxito!</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
-      <!-- Body -->
+     
       <div class="modal-body d-flex align-items-start gap-3">
         <div class="text-success fs-3">✔</div>
         <p class="mb-0">
@@ -197,7 +195,7 @@ const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el))
         </p>
       </div>
 
-      <!-- Footer -->
+      
       <div class="modal-footer">
         <button type="button" class="btn text-white"
           style="background-color:#27481f;"
@@ -212,9 +210,9 @@ const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el))
 
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
 
