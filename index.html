@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compose Coffee</title>
     <link rel="stylesheet" href="estilo.css">
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Favicon -->
+    
     <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon">
     <style>
-        /* Colores y estilo tema café */
+        
         body {
             background-color: #fdf6f0;
         }
         .navbar {
-            background-color: #6f4e37; /* marrón café */
+            background-color: #6f4e37; 
         }
         .navbar .nav-link,
         .navbar-brand {
@@ -48,12 +48,9 @@
             font-size: xx-large;
         }
 
-        /* ==========================
-        MEDIA QUERIES PARA RESPONSIVE
-        =========================== */
         @media (max-width: 767px) {
             #nosotros {
-                font-size: 2.2rem; /* reduce un poco en tablets y móviles */
+                font-size: 2.2rem; 
             }
             #panel {
                 font-size: 1.6rem;
@@ -81,24 +78,23 @@
         }
         #iconos {
             display: flex;
-            justify-content: center; /* centra horizontalmente */
-            gap: 15px;               /* espacio entre íconos */
-            flex-wrap: wrap;         /* si la pantalla es muy pequeña, pasan a otra línea */
+            justify-content: center; 
+            gap: 15px;               
+            flex-wrap: wrap;         
         }
         .img-container {
             width: 100%;
-            height: 250px; /* altura por defecto */
+            height: 250px; 
             overflow: hidden;
         }
 
         .img-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* recorta proporcionalmente */
+            object-fit: cover; 
             display: block;
         }
 
-        /* En pantallas más pequeñas reducimos la altura */
         @media (max-width: 576px) {
             .img-container {
                 height: 180px;
@@ -108,16 +104,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* si la pantalla es muy pequeña se acomodan en varias líneas */
-            gap: 10px; /* espacio entre elementos */
-            padding: 15px 0; /* padding arriba y abajo */
+            flex-wrap: wrap; 
+            gap: 10px; 
+            padding: 15px 0; 
         }
 
         .texto-izquierda, .texto-centro, #iconos {
             margin: 0;
         }
 
-        /* Para móviles, centramos todo */
         @media (max-width: 576px) {
             .footer-flex {
                 flex-direction: column;
@@ -135,14 +130,14 @@
         }
 
         .coffee-title {
-            margin-top: auto; /* fuerza que el título se quede abajo */
+            margin-top: auto; 
             padding: 10px 0;
         }
 
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">COMPOSE COFFEE</a>
@@ -167,7 +162,6 @@
         </div>
     </nav>
 
-    <!-- Carrusel -->
     <div id="carouselCoffee" class="carousel slide mt-4" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselCoffee" data-bs-slide-to="0" class="active"></button>
@@ -205,7 +199,6 @@
         </button>
     </div>
 
-    <!-- Sistema de Grilla -->
     <div class="container text-center mt-5">
         <h2 id="nosotros">Franquicia Compose Coffe</h2>
         <p id="siempre">Siempre estaremos contigo.</p>
@@ -263,17 +256,14 @@
     <footer>
         <div class="container footer-flex">
 
-            <!-- TEXTO IZQUIERDA (independiente) -->
             <p class="texto-izquierda">
                 Curso de Diseño y Desarrollo Web
             </p>
 
-            <!-- TEXTO CENTRO -->
             <p class="texto-centro">
                 Evaluación Integral Isil © 2025-II
             </p>
 
-            <!-- ICONOS IZQUIERDA -->
             <div id="iconos">
                 <a href="https://www.instagram.com/compose_coffee/"><img src="imagen/icon1.png" alt="icon1"></a>
                 <a href="https://apps.apple.com/kr/app/%EC%BB%B4%ED%8F%AC%EC%A6%88%EC%BB%A4%ED%94%BC/id6742086811"><img src="imagen/icon2.png" alt="icon2"></a>
@@ -285,8 +275,7 @@
     </footer>
 
 
-
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
