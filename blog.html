@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <title>Blog | Compose Coffee</title>
   <link rel="stylesheet" href="estilo.css">
-  <!-- Bootstrap CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
-  <!-- Favicon -->
+  
     <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon">
   <style>
         body {
@@ -39,28 +39,28 @@
           font-family: "Voltaire", sans-serif;
           font-size: x-large;
         }
-        /* Color normal */
+        
         .pagination .page-link {
           color: #555;
           background-color: #f8f9fa;
           border-color: #dee2e6;
         }
 
-        /* Hover (cuando pasas el mouse) */
+        
         .pagination .page-link:hover {
           color: #333;
           background-color: #e9ecef;
           border-color: #dee2e6;
         }
 
-        /* Página activa */
+        
         .pagination .page-item.active .page-link {
           color: #fff;
-          background-color: #6c757d; /* gris sobrio */
+          background-color: #6c757d; 
           border-color: #6c757d;
         }
 
-        /* Botones deshabilitados */
+       
         .pagination .page-item.disabled .page-link {
           color: #adb5bd;
           background-color: #f8f9fa;
@@ -93,18 +93,18 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
 #categoria { font-family: "Elsie", serif; font-weight: bold; }
 #sobre { font-family: "Supermercado One", sans-serif; font-size: 1.25rem; font-weight: bold; color: darkmagenta; }
 
-/* --- Imágenes --- */
+
 .card img { width: 100%; height: auto; }
 
-/* --- Pagination --- */
+
 .pagination .page-link { color: #555; background-color: #f8f9fa; border-color: #dee2e6; }
 .pagination .page-link:hover { color: #333; background-color: #e9ecef; border-color: #dee2e6; }
 .pagination .page-item.active .page-link { color: #fff; background-color: #6c757d; border-color: #6c757d; }
 .pagination .page-item.disabled .page-link { color: #adb5bd; background-color: #f8f9fa; border-color: #dee2e6; }
 
-/* --- Media Queries --- */
 
-/* Pantallas medianas */
+
+
 @media (max-width: 992px) {
     #nosotros { font-size: 2.5rem; }
     #se { font-size: 1.1rem; }
@@ -115,7 +115,7 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
     .btn-sm { font-size: 0.85rem; padding: 0.25rem 0.5rem; }
 }
 
-/* Pantallas pequeñas */
+
 @media (max-width: 768px) {
     #nosotros { font-size: 2rem; }
     #se { font-size: 1rem; }
@@ -125,7 +125,7 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
     .btn-sm { font-size: 0.8rem; padding: 0.2rem 0.4rem; }
 }
 
-/* Pantallas muy pequeñas */
+
 @media (max-width: 576px) {
     #nosotros { font-size: 1.5rem; }
     #se { font-size: 0.9rem; }
@@ -170,13 +170,10 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
 
   <div class="row">
 
-    <!-- COLUMNA IZQUIERDA -->
     <div class="col-md-8">
 
-      <!-- PAGINA 1 -->
       <div class="blog-page" data-page="1">
 
-        <!-- Evento 1 -->
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
@@ -192,7 +189,6 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
           </div>
         </div>
 
-        <!-- Evento 2 -->
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
@@ -210,10 +206,10 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
 
       </div>
 
-      <!-- PAGINA 2 -->
+
       <div class="blog-page d-none" data-page="2">
 
-        <!-- Evento 3 -->
+
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
@@ -229,7 +225,6 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
           </div>
         </div>
 
-        <!-- Evento 4 -->
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-4">
@@ -247,7 +242,7 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
 
       </div>
 
-      <!-- PAGINACION -->
+
       <nav>
         <ul class="pagination justify-content-center">
 
@@ -272,7 +267,6 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
 
     </div>
 
-    <!-- COLUMNA DERECHA (FIJA) -->
     <div class="col-md-4">
       <div class="card mb-3">
         <div id="categoria" class="card-header bg-dark text-white">CATEGORÍAS</div>
@@ -297,17 +291,15 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
 <footer>
         <div class="container footer-flex">
 
-            <!-- TEXTO IZQUIERDA (independiente) -->
+        
             <p class="texto-izquierda">
                 Curso de Diseño y Desarrollo Web
             </p>
 
-            <!-- TEXTO CENTRO -->
             <p class="texto-centro">
                 Evaluación Integral Isil © 2025-II
             </p>
 
-            <!-- ICONOS IZQUIERDA -->
             <div id="iconos">
                 <a href="https://www.instagram.com/compose_coffee/"><img src="imagen/icon1.png" alt="icon1"></a>
                 <a href="https://apps.apple.com/kr/app/%EC%BB%B4%ED%8F%AC%EC%A6%88%EC%BB%A4%ED%94%BC/id6742086811"><img src="imagen/icon2.png" alt="icon2"></a>
@@ -361,9 +353,8 @@ h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
 </script>
 
 
-
-<!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
