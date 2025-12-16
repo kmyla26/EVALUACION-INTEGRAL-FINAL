@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros | Compose Coffee</title>
     <link rel="stylesheet" href="estilo.css">
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
-    <!-- Favicon -->
+    
     <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon">
     <style>
         body {
@@ -26,14 +26,12 @@
             color: #fff !important;
         }
 
-        /* Encabezados centrados */
         h2, h3 {
             text-align: center;
             margin-top: 40px;
             margin-bottom: 20px;
         }
 
-        /* Scrollspy contenedor */
         .scrollspy-example {
             position: relative;
             height: 500px;
@@ -57,25 +55,21 @@
             #señor { font-size: 1.5rem; }
         }
 
-        /* 🔹 Estilo base: todos sin color */
         .accordion-button {
         background-color: white;
         color: #4b0055;
         border: 2px solid darkmagenta;
         }
 
-        /* 🟣 PRIMER botón con morado claro al inicio */
         .accordion-item:first-child .accordion-button.collapsed {
-        background-color: #e6c6f2; /* morado claro */
+        background-color: #e6c6f2; 
         }
 
-        /* 🟪 Cuando un botón está ABIERTO (clickeado) */
         .accordion-button:not(.collapsed) {
-        background-color: #b266d9; /* morado más fuerte */
+        background-color: #b266d9; 
         color: white;
         }
 
-        /* Quitar sombra azul fea de Bootstrap */
         .accordion-button:focus {
         box-shadow: none;
         }
@@ -85,38 +79,30 @@
         }
 
         #list-example .list-group-item.active {
-            background-color: #fe894a !important;  /* el color que tú quieras */
+            background-color: #fe894a !important; 
             border-color: #b03704 !important;
             color: #fff !important;
         }
         #list-example .list-group-item-action:hover {
-            background-color: #ffd6a5 !important;  /* el color que quieras */
+            background-color: #ffd6a5 !important; 
         }
 
-        /* ==========================
-        RESPONSIVE TOTAL NOSOTROS.HTML
-        ========================== */
-
-        /* Tablets y pantallas medianas */
         @media (max-width: 767px) {
             #nosotros {
-                font-size: 2.2rem; /* reduce tamaño del título principal */
+                font-size: 2.2rem; 
             }
             #señor {
-                font-size: 1.8rem; /* reduce título secundario */
+                font-size: 1.8rem; 
             }
 
-            /* Ajusta tamaño de encabezados dentro de scrollspy */
             .scroll-section h4 {
                 font-size: 1.2rem;
             }
 
-            /* Párrafos dentro de scrollspy */
             .scroll-section p {
                 font-size: 1rem;
             }
 
-            /* Acordeón */
             .accordion-button {
                 font-size: 1rem;
                 padding: 0.5rem 1rem;
@@ -126,7 +112,6 @@
             }
         }
 
-        /* Móviles pequeños */
         @media (max-width: 576px) {
             #nosotros {
                 font-size: 1.8rem;
@@ -135,30 +120,25 @@
                 font-size: 1.5rem;
             }
 
-            /* Scrollspy: ajustar altura para que no se vea cortado */
             .scrollspy-example {
                 height: 350px;
                 padding: 15px;
             }
 
-            /* Asegura que títulos dentro del scrollspy no se desborden */
             .scroll-section h4 {
                 font-size: 1.1rem;
             }
-
-            /* Párrafos dentro de scrollspy */
+            
             .scroll-section p {
                 font-size: 0.95rem;
-                line-height: 1.4; /* mejora lectura */
+                line-height: 1.4; 
             }
 
-            /* Lista de años: que se vea bien pero sin mover nada */
             #list-example .list-group-item {
                 font-size: 0.95rem;
                 padding: 0.35rem 0.75rem;
             }
 
-            /* Acordeón: ajustar sin mover nada */
             .accordion-button {
                 font-size: 0.95rem;
                 padding: 0.5rem 0.75rem;
@@ -167,31 +147,28 @@
                 font-size: 0.9rem;
             }
 
-            /* Evitar overflow horizontal */
             .container {
                 padding-left: 10px;
                 padding-right: 10px;
             }
         }
-        /* ==========================
-        FOOTER ICONOS RESPONSIVE
-        ========================== */
+
         @media (max-width: 576px) {
             #iconos {
-                justify-content: center; /* centra horizontalmente */
-                gap: 10px;               /* espacio más pequeño entre iconos */
-                flex-wrap: wrap;         /* si hay muchas, pasan a otra línea */
+                justify-content: center; 
+                gap: 10px;               
+                flex-wrap: wrap;         
             }
 
             #iconos img {
-                width: 30px;  /* más pequeño en móviles */
-                height: auto; /* mantiene proporción */
+                width: 30px;  
+                height: auto; 
                 max-width: 100%;
             }
         }
 
         .scroll-section {
-            padding-top: 60px; /* o el valor de data-bs-offset */
+            padding-top: 60px; 
             margin-bottom: 40px;
         }
 
@@ -199,7 +176,7 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+   
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">COMPOSE COFFEE</a>
@@ -224,7 +201,6 @@
         </div>
     </nav>
 
-    <!-- Carrusel -->
     <div class="container mt-5">
         <h2 id="nosotros">SOBRE NOSOTROS</h2>
         <div class="row">
@@ -394,17 +370,14 @@
     <footer>
         <div class="container footer-flex">
 
-            <!-- TEXTO IZQUIERDA (independiente) -->
             <p class="texto-izquierda">
                 Curso de Diseño y Desarrollo Web
             </p>
 
-            <!-- TEXTO CENTRO -->
             <p class="texto-centro">
                 Evaluación Integral Isil © 2025-II
             </p>
-
-            <!-- ICONOS IZQUIERDA -->
+            
             <div id="iconos">
                 <a href="https://www.instagram.com/compose_coffee/"><img src="imagen/icon1.png" alt="icon1"></a>
                 <a href="https://apps.apple.com/kr/app/%EC%BB%B4%ED%8F%AC%EC%A6%88%EC%BB%A4%ED%94%BC/id6742086811"><img src="imagen/icon2.png" alt="icon2"></a>
@@ -421,7 +394,6 @@ const links = document.querySelectorAll('#list-example .list-group-item');
 const sections = document.querySelectorAll('.scroll-section');
 const scrollContainer = document.querySelector('.scrollspy-example');
 
-// Scroll suave al hacer click
 links.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
@@ -432,13 +404,11 @@ links.forEach(link => {
             behavior: 'smooth'
         });
 
-        // Marcar link clickeado
         links.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
     });
 });
 
-// Detectar sección activa al hacer scroll
 scrollContainer.addEventListener('scroll', () => {
     const scrollTop = scrollContainer.scrollTop;
     const containerHeight = scrollContainer.clientHeight;
@@ -446,25 +416,25 @@ scrollContainer.addEventListener('scroll', () => {
     let current = sections[0];
 
     sections.forEach(section => {
-        // Si la sección está en la vista (top <= scrollTop + offset < bottom)
+
         if (scrollTop >= section.offsetTop - 10) { 
             current = section;
         }
     });
 
-    // Si llegamos al fondo, marcar la última sección
+
     if (scrollContainer.scrollHeight - scrollContainer.scrollTop - containerHeight <= 1) {
         current = sections[sections.length - 1];
     }
 
-    // Marcar solo la sección actual
+
     links.forEach(link => link.classList.remove('active'));
     const activeLink = document.querySelector(`#list-example a[href="#${current.id}"]`);
     if(activeLink) activeLink.classList.add('active');
 });
 </script>
 
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
