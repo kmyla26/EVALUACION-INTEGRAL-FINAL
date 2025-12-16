@@ -1,0 +1,346 @@
+.info-card {
+  background-color: #d2b48c; /* color café claro */
+  color: #3e2723;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.info-card:hover {
+  background-color: #b08968; /* más oscuro */
+  transform: translateY(-5px); /* efecto elegante */
+  color: #ffffff;
+}
+
+.coffee-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Mantener forma cuadrada */
+.img-container {
+  aspect-ratio: 1 / 1; /* CUADRADO */
+  overflow: hidden;
+}
+
+/* Imagen */
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom */
+.coffee-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Título inferior */
+.coffee-title {
+  background-color: #6f4e37;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+footer {
+  background-color: #6f4e37;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* CONTENEDOR FLEX */
+.footer-flex {
+  display: flex;
+  align-items: center;        /* MISMO NIVEL */
+  justify-content: space-between;
+}
+
+/* IZQUIERDA */
+.texto-izquierda {
+  margin-left: 20px;
+}
+
+/* CENTRO */
+.texto-centro {
+  margin-left: 90px;
+  text-align: center;
+}
+
+/* DERECHA */
+#iconos {
+  display: flex;
+  gap: 4px;
+}
+
+/* ICONOS */
+#iconos img {
+  width: 80px;
+  height: 80px;
+  transition: filter 0.3s ease;
+}
+
+#iconos img:hover {
+  filter: brightness(1.3);
+}
+
+/* RESET TOTAL DEL ACORDEÓN */
+.accordion,
+.accordion-item,
+.accordion-header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* ITEM PEGADO */
+.accordion-item {
+  border-bottom: 0;
+}
+
+/* BOTÓN PEGADO */
+.accordion-button {
+  background-color: #e0e7ff;
+  color: #000;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* BOTÓN ACTIVO */
+.accordion-button:not(.collapsed) {
+  background-color: #c7d2fe;
+}
+
+/* QUITAR LÍNEA BLANCA */
+.accordion-button::after {
+  margin-left: auto;
+}
+
+/* CONTENIDO */
+.accordion-body {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1.25rem;
+}
+
+/* EVITA ESPACIOS FANTASMA */
+.accordion-collapse {
+  border: 0;
+}
+.accordion{
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+
+.card-info {
+    position: relative;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo del Overlay (fondo amarillo con transparencia) */
+.info-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 215, 0, 0.75); /* Fondo amarillo semitransparente */
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Mostrar overlay */
+.info-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos del botón dentro del overlay */
+.info-overlay .cerrar-info {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Botón "Ver información" */
+.ver-info {
+    text-decoration: none;
+}
+
+/* Estilo para mejorar visualmente */
+.card-body {
+    padding: 10px;
+}
+.card-info {
+    position: relative;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.info-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 215, 0, 0.75);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.info-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ===== RESET TOTAL BOOTSTRAP TABS ===== */
+.tabs-custom.nav-tabs .nav-link {
+    border: none !important;
+    background: transparent !important;
+    margin: 0 4px;
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 6px 6px 0 0;
+    transition: all 0.3s ease;
+}
+
+/* ===== COLORES BASE (NO AZUL) ===== */
+.tabs-custom .tab-combo {
+    color: crimson !important;
+}
+
+.tabs-custom .tab-temporada {
+    color: darkgreen !important;
+}
+
+.tabs-custom .tab-latte {
+    color: darkmagenta !important;
+}
+
+.tabs-custom .tab-frappe {
+    color: darkorange !important;
+}
+
+.tabs-custom .tab-batido {
+    color: deeppink !important;
+}
+
+.tabs-custom .tab-jugos {
+    color: slateblue !important;
+}
+
+/* ===== ACTIVO (CUADRADO + COLOR OSCURO) ===== */
+.tabs-custom .tab-combo.active {
+    background-color: rgba(220, 20, 60, 0.25) !important;
+    color: darkred !important;
+}
+
+.tabs-custom .tab-temporada.active {
+    background-color: rgba(0, 100, 0, 0.25) !important;
+    color: #064b06 !important;
+}
+
+.tabs-custom .tab-latte.active {
+    background-color: rgba(139, 0, 139, 0.25) !important;
+    color: indigo !important;
+}
+
+.tabs-custom .tab-frappe.active {
+    background-color: rgba(255, 140, 0, 0.3) !important;
+    color: #b45309 !important;
+}
+
+.tabs-custom .tab-batido.active {
+    background-color: rgba(255, 20, 147, 0.3) !important;
+    color: #9b003f !important;
+}
+
+.tabs-custom .tab-jugos.active {
+    background-color: rgba(106, 90, 205, 0.3) !important;
+    color: #2f2f8f !important;
+}
+
+/* Hover mantiene color */
+.tabs-custom .nav-link:hover {
+    color: inherit !important;
+}
+
+
+/* Tabs colores */
+.tab-all.active {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.tab-compose.active {
+  background-color: #6f42c1;
+  color: #fff;
+}
+
+.tab-bts.active {
+  background-color: #198754;
+  color: #fff;
+}
+
+.tab-machines.active {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Badge morado */
+.bg-purple {
+  background-color: #6f42c1;
+}
+
+.tag {
+  font-weight: 800;     /* bien negrita */
+  margin-right: 6px;   /* separación del texto */
+}
+
+/* Colores según categoría */
+.tag.compose {
+  color: #6c757d; /* secondary */
+}
+
+.tag.bts {
+  color: #198754; /* success */
+}
+
+.tag.machines {
+  color: #ffc107; /* warning */
+}
+
+.tab-all i {
+  font-size: 0.9rem;
+}
+
+

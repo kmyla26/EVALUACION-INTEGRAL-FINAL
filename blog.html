@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog | Compose Coffee</title>
+  <link rel="stylesheet" href="estilo.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon">
+  <style>
+        body {
+            background-color: #fdf6f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #6f4e37;
+        }
+        .navbar .nav-link,
+        .navbar-brand {
+            color: #fff !important;
+        }
+        #nosotros {
+            font-family: "Sekuya", system-ui;
+            font-size: xxx-large;
+        }
+        #se{
+          font-family: "Metamorphous", serif;
+          font-weight: bolder;
+        }
+        h5{
+          font-family: "Voltaire", sans-serif;
+          font-size: x-large;
+        }
+        /* Color normal */
+        .pagination .page-link {
+          color: #555;
+          background-color: #f8f9fa;
+          border-color: #dee2e6;
+        }
+
+        /* Hover (cuando pasas el mouse) */
+        .pagination .page-link:hover {
+          color: #333;
+          background-color: #e9ecef;
+          border-color: #dee2e6;
+        }
+
+        /* Página activa */
+        .pagination .page-item.active .page-link {
+          color: #fff;
+          background-color: #6c757d; /* gris sobrio */
+          border-color: #6c757d;
+        }
+
+        /* Botones deshabilitados */
+        .pagination .page-item.disabled .page-link {
+          color: #adb5bd;
+          background-color: #f8f9fa;
+          border-color: #dee2e6;
+        }
+        
+        #categoria{
+          font-family: "Elsie", serif;
+          font-weight: bold;
+        }
+        #sobre{
+          font-family: "Supermercado One", sans-serif;
+          font-size: x-large ;
+          font-weight: bold;
+          color: darkmagenta;
+        }
+
+body {
+    background-color: #fdf6f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar { background-color: #6f4e37; }
+.navbar .nav-link, .navbar-brand { color: #fff !important; }
+
+#nosotros { font-family: "Sekuya", system-ui; font-size: 3rem; }
+#se { font-family: "Metamorphous", serif; font-weight: bolder; }
+h5 { font-family: "Voltaire", sans-serif; font-size: 1.25rem; }
+
+#categoria { font-family: "Elsie", serif; font-weight: bold; }
+#sobre { font-family: "Supermercado One", sans-serif; font-size: 1.25rem; font-weight: bold; color: darkmagenta; }
+
+/* --- Imágenes --- */
+.card img { width: 100%; height: auto; }
+
+/* --- Pagination --- */
+.pagination .page-link { color: #555; background-color: #f8f9fa; border-color: #dee2e6; }
+.pagination .page-link:hover { color: #333; background-color: #e9ecef; border-color: #dee2e6; }
+.pagination .page-item.active .page-link { color: #fff; background-color: #6c757d; border-color: #6c757d; }
+.pagination .page-item.disabled .page-link { color: #adb5bd; background-color: #f8f9fa; border-color: #dee2e6; }
+
+/* --- Media Queries --- */
+
+/* Pantallas medianas */
+@media (max-width: 992px) {
+    #nosotros { font-size: 2.5rem; }
+    #se { font-size: 1.1rem; }
+    h5 { font-size: 1.1rem; }
+    #sobre { font-size: 1.1rem; }
+    .col-md-4, .col-md-8 { flex: 0 0 100%; max-width: 100%; }
+    .card-body { padding: 0.75rem; }
+    .btn-sm { font-size: 0.85rem; padding: 0.25rem 0.5rem; }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+    #nosotros { font-size: 2rem; }
+    #se { font-size: 1rem; }
+    h5 { font-size: 1rem; }
+    #sobre { font-size: 1rem; }
+    .card-body { padding: 0.5rem; }
+    .btn-sm { font-size: 0.8rem; padding: 0.2rem 0.4rem; }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 576px) {
+    #nosotros { font-size: 1.5rem; }
+    #se { font-size: 0.9rem; }
+    h5 { font-size: 0.9rem; }
+    #sobre { font-size: 0.9rem; }
+    .card-body { padding: 0.4rem; }
+    .btn-sm { font-size: 0.75rem; padding: 0.2rem 0.3rem; }
+}
+
+  </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">COMPOSE COFFEE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="noticias.html">Noticias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<div class="container my-5">
+  <h2 id="nosotros" class="text-center">Nuestro Blog de Café</h2>
+  <p id="se" class="text-center text-muted">Sé el primero, tenemos eventos, promociones y muchas cosas más.</p>
+
+  <div class="row">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="col-md-8">
+
+      <!-- PAGINA 1 -->
+      <div class="blog-page" data-page="1">
+
+        <!-- Evento 1 -->
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="imagen/evento1.jpg" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5>Evento de lanzamiento del nuevo menú 'V COMPOSED'</h5>
+                <p>De qué trata, cómo es y mucho más.</p>
+                <a href="https://composecoffee.com/event/253430" class="btn btn-sm text-white" style="background:#ffd000f6;">Leer artículo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="imagen/evento2.jpg" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5>Sorteo de cupones Compose Coffee: "El café es como el café"</h5>
+                <p>Descubre cómo participar, porque tú puedes ser la afortunada o afortunado</p>
+                <a href="https://composecoffee.com/event/253419" class="btn btn-sm text-white" style="background:darkblue;">Leer artículo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PAGINA 2 -->
+      <div class="blog-page d-none" data-page="2">
+
+        <!-- Evento 3 -->
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="imagen/Evento 3.jpg" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5>Promoción de productos Compose Coffe X Zootopia 'MOMENTOS DE COMPOSICIÓN'</h5>
+                <p>Con la llegada de Zootopia 2 llegan también nuevas promociones, no te lo pierdas.</p>
+                <a href="https://composecoffee.com/event/274145" class="btn btn-sm text-white" style="background:#ff1500f6;">Leer artículo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evento 4 -->
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="imagen/Evento 4.jpg" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5>'V COMPOSED' lanza tres nuevos elementos de menú</h5>
+                <p>Con V de BTS como embajador nuestro menú también se vulve especil, qué esperas ven y dicfruta la nueva carta que tenemos.</p>
+                <a href="https://composecoffee.com/event/252523" class="btn btn-sm text-white" style="background:#ff0080f6;">Leer artículo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PAGINACION -->
+      <nav>
+        <ul class="pagination justify-content-center">
+
+          <li class="page-item disabled" id="prevBtn">
+            <a class="page-link" href="#" onclick="prevPage()">Anterior</a>
+          </li>
+
+          <li class="page-item active" id="page1">
+            <a class="page-link" href="#" onclick="changePage(1)">1</a>
+          </li>
+
+          <li class="page-item" id="page2">
+            <a class="page-link" href="#" onclick="changePage(2)">2</a>
+          </li>
+
+          <li class="page-item" id="nextBtn">
+            <a class="page-link" href="#" onclick="nextPage()">Siguiente</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- COLUMNA DERECHA (FIJA) -->
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <div id="categoria" class="card-header bg-dark text-white">CATEGORÍAS</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Café</li>
+          <li class="list-group-item">Proceso</li>
+          <li class="list-group-item">Cultura</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h6 id="sobre">Sobre Compose Coffee</h6>
+          <p>Marca especializada en café de especialidad y experiencias únicas.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+        <div class="container footer-flex">
+
+            <!-- TEXTO IZQUIERDA (independiente) -->
+            <p class="texto-izquierda">
+                Curso de Diseño y Desarrollo Web
+            </p>
+
+            <!-- TEXTO CENTRO -->
+            <p class="texto-centro">
+                Evaluación Integral Isil © 2025-II
+            </p>
+
+            <!-- ICONOS IZQUIERDA -->
+            <div id="iconos">
+                <a href="https://www.instagram.com/compose_coffee/"><img src="imagen/icon1.png" alt="icon1"></a>
+                <a href="https://apps.apple.com/kr/app/%EC%BB%B4%ED%8F%AC%EC%A6%88%EC%BB%A4%ED%94%BC/id6742086811"><img src="imagen/icon2.png" alt="icon2"></a>
+                <a href="https://play.google.com/store/apps/details?id=ci.dvn.composecoffee.app"><img src="imagen/icon3.png" alt="icon3"></a>
+                <a href="https://composecoffee.synology.me:3334/#/signin"><img src="imagen/icon4.png" alt="icon4"></a>
+            </div>
+
+        </div>
+    </footer>
+
+
+<script>
+  let currentPage = 1;
+  const totalPages = 2;
+
+  function showPage(page) {
+    document.querySelectorAll('.blog-page').forEach(div => {
+      div.classList.add('d-none');
+    });
+
+    document.querySelector(`[data-page="${page}"]`).classList.remove('d-none');
+
+    document.querySelectorAll('.page-item').forEach(li => {
+      li.classList.remove('active');
+    });
+
+    document.getElementById(`page${page}`).classList.add('active');
+
+    // Control Anterior / Siguiente
+    document.getElementById('prevBtn').classList.toggle('disabled', page === 1);
+    document.getElementById('nextBtn').classList.toggle('disabled', page === totalPages);
+
+    currentPage = page;
+  }
+
+  function changePage(page) {
+    showPage(page);
+  }
+
+  function prevPage() {
+    if (currentPage > 1) {
+      showPage(currentPage - 1);
+    }
+  }
+
+  function nextPage() {
+    if (currentPage < totalPages) {
+      showPage(currentPage + 1);
+    }
+  }
+</script>
+
+
+
+<!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

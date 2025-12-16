@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Compose Coffee</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #fdf6f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #6f4e37;
+        }
+        .navbar .nav-link,
+        .navbar-brand {
+            color: #fff !important;
+        }
+
+        /* Encabezados centrados */
+        h2, h3 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Scrollspy contenedor */
+        .scrollspy-example {
+            position: relative;
+            height: 500px;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        #nosotros{
+            font-family: "Sekuya", system-ui;
+            font-size: xxx-large;
+        }
+        #señor{
+            font-family: "Croissant One", serif;
+            font-weight: bold;
+        }
+        @media (max-width: 576px){
+            #nosotros { font-size: 1.8rem; }
+            #señor { font-size: 1.5rem; }
+        }
+
+        /* 🔹 Estilo base: todos sin color */
+        .accordion-button {
+        background-color: white;
+        color: #4b0055;
+        border: 2px solid darkmagenta;
+        }
+
+        /* 🟣 PRIMER botón con morado claro al inicio */
+        .accordion-item:first-child .accordion-button.collapsed {
+        background-color: #e6c6f2; /* morado claro */
+        }
+
+        /* 🟪 Cuando un botón está ABIERTO (clickeado) */
+        .accordion-button:not(.collapsed) {
+        background-color: #b266d9; /* morado más fuerte */
+        color: white;
+        }
+
+        /* Quitar sombra azul fea de Bootstrap */
+        .accordion-button:focus {
+        box-shadow: none;
+        }
+        .scroll-section {
+            padding-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        #list-example .list-group-item.active {
+            background-color: #fe894a !important;  /* el color que tú quieras */
+            border-color: #b03704 !important;
+            color: #fff !important;
+        }
+        #list-example .list-group-item-action:hover {
+            background-color: #ffd6a5 !important;  /* el color que quieras */
+        }
+
+        /* ==========================
+        RESPONSIVE TOTAL NOSOTROS.HTML
+        ========================== */
+
+        /* Tablets y pantallas medianas */
+        @media (max-width: 767px) {
+            #nosotros {
+                font-size: 2.2rem; /* reduce tamaño del título principal */
+            }
+            #señor {
+                font-size: 1.8rem; /* reduce título secundario */
+            }
+
+            /* Ajusta tamaño de encabezados dentro de scrollspy */
+            .scroll-section h4 {
+                font-size: 1.2rem;
+            }
+
+            /* Párrafos dentro de scrollspy */
+            .scroll-section p {
+                font-size: 1rem;
+            }
+
+            /* Acordeón */
+            .accordion-button {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            .accordion-body {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Móviles pequeños */
+        @media (max-width: 576px) {
+            #nosotros {
+                font-size: 1.8rem;
+            }
+            #señor {
+                font-size: 1.5rem;
+            }
+
+            /* Scrollspy: ajustar altura para que no se vea cortado */
+            .scrollspy-example {
+                height: 350px;
+                padding: 15px;
+            }
+
+            /* Asegura que títulos dentro del scrollspy no se desborden */
+            .scroll-section h4 {
+                font-size: 1.1rem;
+            }
+
+            /* Párrafos dentro de scrollspy */
+            .scroll-section p {
+                font-size: 0.95rem;
+                line-height: 1.4; /* mejora lectura */
+            }
+
+            /* Lista de años: que se vea bien pero sin mover nada */
+            #list-example .list-group-item {
+                font-size: 0.95rem;
+                padding: 0.35rem 0.75rem;
+            }
+
+            /* Acordeón: ajustar sin mover nada */
+            .accordion-button {
+                font-size: 0.95rem;
+                padding: 0.5rem 0.75rem;
+            }
+            .accordion-body {
+                font-size: 0.9rem;
+            }
+
+            /* Evitar overflow horizontal */
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        /* ==========================
+        FOOTER ICONOS RESPONSIVE
+        ========================== */
+        @media (max-width: 576px) {
+            #iconos {
+                justify-content: center; /* centra horizontalmente */
+                gap: 10px;               /* espacio más pequeño entre iconos */
+                flex-wrap: wrap;         /* si hay muchas, pasan a otra línea */
+            }
+
+            #iconos img {
+                width: 30px;  /* más pequeño en móviles */
+                height: auto; /* mantiene proporción */
+                max-width: 100%;
+            }
+        }
+
+        .scroll-section {
+            padding-top: 60px; /* o el valor de data-bs-offset */
+            margin-bottom: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">COMPOSE COFFEE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="noticias.html">Noticias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel -->
+    <div class="container mt-5">
+        <h2 id="nosotros">SOBRE NOSOTROS</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div id="list-example" class="list-group sticky-top altura-historia">
+                    <a class="list-group-item list-group-item-action active" href="#list-item-1">2025</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">2024</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3">2023</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">2022</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-5">2021</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-6">2020</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-7">2019</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-8">2018</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-9">2017</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-10">2016</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-11">2015</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-12">2014</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div data-bs-spy="scroll" 
+                     data-bs-target="#list-example" 
+                     data-bs-smooth-scroll="true" 
+                     data-bs-offset="0"
+                     class="scrollspy-example" 
+                     tabindex="0">
+
+                    <div id="list-item-1" class="scroll-section">
+                        <h4>2025</h4>
+                        <p> ✔ Seleccionada como una de las 100 mejores franquicias del periódico Maeil Business por cuarto año consecutivo <br>
+                            ✔ Se han lanzado tres artículos de menú exclusivos que presentan a V de BTS, el modelo publicitario. <br>
+                            ✔ Un camión de café móvil apoya los esfuerzos de extinción de incendios en la provincia de Gyeongbuk. <br>
+                            ✔ Un "camión de café móvil" apoya los esfuerzos de recuperación tras las inundaciones en Dangjin, provincia de Chungcheong del Sur.</p>
+                    </div>
+                    <div id="list-item-2" class="scroll-section">
+                        <h4>2024</h4>
+                        <p> ✔ Se inaugura la sucursal 2780 de Compose Coffee y se completa el contrato <br>
+                            ✔ El modelo publicitario V (BTS) firmó un acuerdo de promoción de un álbum sencillo digital. <br>
+                            ✔ Acuerdo de promoción del patrocinador oficial del 11.º aniversario de BTS Festa <br>
+                            ✔ Recibió el 25º Premio del Presidente de la Asociación de Desarrollo de la Industria de Franquicias de Corea</p>
+                    </div>
+                    <div id="list-item-3" class="scroll-section">
+                        <h4>2023</h4>
+                        <p> ✔ Se inaugura la sucursal número 2450 de Compose Coffee y se completa el contrato <br>
+                            ✔ Ganador del 14º Premio Nacional de Marca de Corea <br>
+                            ✔ Ganador del premio a la marca más querida de Corea de 2023 <br>
+                            ✔ V de BTS ha sido seleccionado como el nuevo modelo para Compose Coffee.</p>
+                    </div>
+                    <div id="list-item-4" class="scroll-section">
+                        <h4>2022</h4>
+                        <p> ✔ Se inaugura la tienda número 2000 de Compose Coffee y se completa el contrato <br>
+                            ✔ Patrocinador oficial del 'Concurso de Baristas para Discapacitados' del Busan Coffee Show <br>
+                            ✔ Las 100 mejores franquicias de 2022 según el periódico Maeil Business <br>
+                            ✔ Coorganización de los 4.º Premios de Contenido de Asia</p>
+                    </div>
+                    <div id="list-item-5" class="scroll-section">
+                        <h4>2021</h4>
+                        <p> ✔ Se inaugura la sucursal 1330 de Compose Coffee y se completa el contrato <br>
+                            ✔ Compose Coffee brinda soporte en granos de café a excelentes tiendas. <br>
+                            ✔ Se lanza la aplicación exclusiva de Compose Coffee <br>
+                            ✔ Recibió la Condecoración del Ministro de Administración Pública y Seguridad</p>
+                    </div>
+                    <div id="list-item-6" class="scroll-section">
+                        <h4>2020</h4>
+                        <p> ✔ Se inaugura la tienda número 800 de Compose Coffee y se firma el contrato <br>
+                            ✔ Renovación del diseño interior de la tienda (segundo semestre de 2020) <br>
+                            ✔ Seleccionada como 'Buena Marca' por la Comisión de Comercio Justo <br>
+                            ✔ Ganador del 'Premio al Consumidor de Corea' de la Asociación de Consumidores de Corea 2020</p>
+                    </div>
+                    <div id="list-item-7" class="scroll-section">
+                        <h4>2019</h4>
+                        <p> ✔ Se inaugura la sucursal número 400 de Compose Coffee <br>
+                            ✔ Galardonado con el Premio del Ministro de Comercio, Industria y Energía <br>
+                            ✔ Se abre la primera tienda de Gangwon-do (Gangneung) <br>
+                            ✔ Ceremonia de colocación de la primera piedra del nuevo edificio (que se completará en el primer semestre de 2021)</p>
+                    </div>
+                    <div id="list-item-8" class="scroll-section">
+                        <h4>2018</h4>
+                        <p> ✔ Se inaugura la sucursal número 220 de Compose Coffee <br>
+                            ✔ Premio del Comisionado de Seguridad de Alimentos y Medicamentos de la KFA <br>
+                            ✔ Seleccionada como "Buena Marca" por MBC Radio en "Starry Night" <br>
+                            ✔ Establecimiento de la sucursal de Incheon</p>
+                    </div>
+                    <div id="list-item-9" class="scroll-section">
+                        <h4>2017</h4>
+                        <p> ✔ Se inaugura la sucursal número 150 de Compose Coffee <br>
+                            ✔ Lograr unas ventas mensuales promedio de 25 millones de wones <br>
+                            ✔ Establecimiento del Laboratorio de Investigación de Café Compose (I+D) <br>
+                            ✔ Se emite el programa de startups de JTBC 'Compose Coffee'</p>
+                    </div>
+                    <div id="list-item-10" class="scroll-section">
+                        <h4>2016</h4>
+                        <p> ✔ Se inaugura la sucursal número 95 de Compose Coffee <br>
+                            ✔ Establecimiento de la planta tostadora con sede más grande de Corea <br>
+                            ✔ Establecimiento de sucursales en Seúl, Daegu, Incheon y Gyeongbuk <br>
+                            ✔ Se logró una producción mensual de grano de café de 15 toneladas</p>
+                    </div>
+                    <div id="list-item-11" class="scroll-section">
+                        <h4>2015</h4>
+                        <p> ✔ Se inaugura la sucursal número 41 de Compose Coffee <br>
+                            ✔ Se logró una producción mensual de grano de café de 10 toneladas <br>
+                            ✔ Se abre la primera tienda gestionada directamente en Seúl <br>
+                            ✔ Crecimiento anual de ventas del 400%</p>
+                    </div>
+                    <div id="list-item-12" class="scroll-section">
+                        <h4>2014</h4>
+                        <p> ✔ Lanzamiento de la marca Compose Coffee <br>
+                            ✔ Mezcla de espresso 'Bitterholic' OEM <br>
+                            ✔ El volumen de producción de granos de café alcanzó las 5 toneladas <br>
+                            ✔ Se inaugura la décima sucursal de Compose Coffee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 id="señor">Señor, ¿por qué eligió Compose Coffee?</h2>
+        <h3 style="font-size: medium;">Diferentes propietarios respondieron sobre Compose Coffee, quienes dirigen actualmente un negocio personalmente.</h3>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Con V de BTS, la eficacia del marketing ¿Realmente puedes sentirlo?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Entrevista al propietario de la sucursal Ilsan La Festa 2031.</strong> <br>
+                        He notado una notable afluencia de nuevos clientes, incluyendo fans de BTS, extranjeros y veinteañeros.
+                        Recientemente, incluso un grupo de clientes japoneses entró, se tomó fotos frente a la tienda y pidió bebidas.
+                        Como franquiciado, siempre me enorgullece que V de BTS represente la marca que dirijo.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Qué tan buena es la calidad de los materiales, están satisfechos?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Entrevista con el propietario de la sucursal número 1839 de Hwaseong Joam.</strong> <br> 
+                        En primer lugar, estoy sumamente satisfecho con el hecho de que la sede central suministra materias primas de alta calidad , desde granos de café básicos hasta purés de frutas y leche de primera calidad, a precios razonables. Además, la leche que se suministra a las tiendas es deliciosa, rivalizando incluso con las leches más caras del mercado.
+                        Confío en que una marca que se adhiera a estos principios fundamentales perdurará en la industria.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Operación de múltiples tiendas ¿Qué le impulsó a tomar esta decisión y qué tan satisfecho está ahora con ello?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Entrevista con el propietario de la tienda n.° 2469 de Anyang 1st Street.</strong><br> 
+                        Tras dirigir mi primera tienda durante unos tres años, desarrollé una gran confianza en Compose Coffee y quedé satisfecho con las ventas, lo que me llevó a abrir una segunda sucursal.
+                        Han pasado unas dos semanas desde que abrí mi segunda tienda, y las ventas han sido buenas desde el principio, así que espero que sigan creciendo.
+                        Si se me da la oportunidad, me encantaría abrir otra .
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-flex">
+
+            <!-- TEXTO IZQUIERDA (independiente) -->
+            <p class="texto-izquierda">
+                Curso de Diseño y Desarrollo Web
+            </p>
+
+            <!-- TEXTO CENTRO -->
+            <p class="texto-centro">
+                Evaluación Integral Isil © 2025-II
+            </p>
+
+            <!-- ICONOS IZQUIERDA -->
+            <div id="iconos">
+                <a href="https://www.instagram.com/compose_coffee/"><img src="imagen/icon1.png" alt="icon1"></a>
+                <a href="https://apps.apple.com/kr/app/%EC%BB%B4%ED%8F%AC%EC%A6%88%EC%BB%A4%ED%94%BC/id6742086811"><img src="imagen/icon2.png" alt="icon2"></a>
+                <a href="https://play.google.com/store/apps/details?id=ci.dvn.composecoffee.app"><img src="imagen/icon3.png" alt="icon3"></a>
+                <a href="https://composecoffee.synology.me:3334/#/signin"><img src="imagen/icon4.png" alt="icon4"></a>
+            </div>
+
+        </div>
+    </footer>
+
+
+<script>
+const links = document.querySelectorAll('#list-example .list-group-item');
+const sections = document.querySelectorAll('.scroll-section');
+const scrollContainer = document.querySelector('.scrollspy-example');
+
+// Scroll suave al hacer click
+links.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+
+        scrollContainer.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+        });
+
+        // Marcar link clickeado
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+// Detectar sección activa al hacer scroll
+scrollContainer.addEventListener('scroll', () => {
+    const scrollTop = scrollContainer.scrollTop;
+    const containerHeight = scrollContainer.clientHeight;
+
+    let current = sections[0];
+
+    sections.forEach(section => {
+        // Si la sección está en la vista (top <= scrollTop + offset < bottom)
+        if (scrollTop >= section.offsetTop - 10) { 
+            current = section;
+        }
+    });
+
+    // Si llegamos al fondo, marcar la última sección
+    if (scrollContainer.scrollHeight - scrollContainer.scrollTop - containerHeight <= 1) {
+        current = sections[sections.length - 1];
+    }
+
+    // Marcar solo la sección actual
+    links.forEach(link => link.classList.remove('active'));
+    const activeLink = document.querySelector(`#list-example a[href="#${current.id}"]`);
+    if(activeLink) activeLink.classList.add('active');
+});
+</script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Compose Coffee</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon"><style>
+        body {
+            background-color: #fdf6f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #6f4e37;
+        }
+        .navbar .nav-link,
+        .navbar-brand {
+            color: #fff !important;
+        }
+        /* Encabezados centrados */
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        #nosotros {
+            font-family: "Sekuya", system-ui;
+            font-size: xxx-large;
+        }
+        h5{
+            font-family: "Agbalumo", system-ui;
+        }
+        #nombres{
+            font-family: "Metamorphous", serif;
+        }
+
+        /* Pantallas medianas */
+        @media (max-width: 992px) {
+        .footer-flex {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .texto-centro {
+            margin-left: 0;
+        }
+
+        #iconos img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .coffee-title {
+            font-size: 0.9rem;
+            padding: 12px;
+        }
+
+        .info-overlay {
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+
+        .card-body {
+            padding: 8px;
+        }
+        }
+
+        /* Pantallas pequeñas */
+        @media (max-width: 768px) {
+        #iconos img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .coffee-title {
+            font-size: 0.85rem;
+            padding: 10px;
+        }
+
+        .info-overlay h4 {
+            font-size: 0.75rem;
+        }
+
+        .info-overlay p {
+            font-size: 0.7rem;
+        }
+
+        .card-body h5 {
+            font-size: 0.85rem;
+        }
+        }
+
+        /* Pantallas muy pequeñas (celulares) */
+        @media (max-width: 576px) {
+        .footer-flex {
+            gap: 8px;
+        }
+
+        #iconos img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .coffee-title {
+            font-size: 0.8rem;
+            padding: 8px;
+        }
+
+        .info-overlay h4 {
+            font-size: 0.7rem;
+        }
+
+        .info-overlay p {
+            font-size: 0.65rem;
+        }
+
+        .card-body h5 {
+            font-size: 0.8rem;
+        }
+        }
+
+        #nosotros {
+            font-family: "Sekuya", system-ui;
+            font-size: 3rem; /* tamaño base */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Ajustes responsive */
+        @media (max-width: 992px) {
+            #nosotros {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #nosotros {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #nosotros {
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+    .texto-izquierda, .texto-centro {
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    #iconos {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex: 1 1 100%;
+    }
+
+
+    #iconos img:hover {
+        filter: brightness(1.3);
+    }
+
+        
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">COMPOSE COFFEE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Más</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="noticias.html">Noticias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <h2 id="nosotros" class="text-center mb-4 tabs-custom">Nuestros Productos</h2>
+
+        <ul class="nav nav-tabs justify-content-center mb-4 tabs-custom" role="tablist">
+
+            <li class="nav-item">
+                <a id="nombres" class="nav-link tab-combo active" data-bs-toggle="tab" href="#combo">
+                    Combo de Compose
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a id="nombres" class="nav-link tab-temporada" data-bs-toggle="tab" href="#temporada">
+                    Temporada limitada
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a id="nombres" class="nav-link tab-latte" data-bs-toggle="tab" href="#latte">
+                    Latte sin café
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a id="nombres" class="nav-link tab-frappe" data-bs-toggle="tab" href="#frappe">
+                    Frappés & Smoothies
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a id="nombres" class="nav-link tab-batido" data-bs-toggle="tab" href="#batido">
+                    Batido
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a id="nombres" class="nav-link tab-jugos" data-bs-toggle="tab" href="#jugos">
+                    Ade / Jugo
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="tab-content">
+
+             <div class="tab-pane fade show active" id="combo">
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/combo1.jpg" class="card-img-top" alt="">
+                            
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Carpa con sabor a fresa</h4>
+                                    <p style="font-size: x-small;"> ⚬ Composición: Strawberry Latte + Brown Bungeo Dickman's <br>
+                                        ⚬ Capacidad: Bebida (591 ml) + Topping (65 g) <br>
+                                        ⚬ Calorías (kcal): 725.00 <br>
+                                        ⚬ Sodio (mg): 178,26 <br>
+                                        ⚬ Carbohidratos (g): 107,02 <br>
+                                        ⚬ Azúcar (g): 78,59 <br>
+                                        ⚬ Grasas (g): 27,60 <br>
+                                        ⚬ Grasas saturadas (g): 20,22 <br>
+                                        ⚬ Proteínas (g): 9,18</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Carpa con sabor a fresa</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/combo2.jpg" class="card-img-top">
+                            
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Kano masticable</h4>
+                                    <p style="font-size: x-small;"> ⚬ Composición: Americano helado + Galleta masticable <br>
+                                        ⚬ Capacidad: Bebida (591 ml) + Topping (80 g) <br>
+                                        ⚬ Cafeína - 2 dosis: 156 mg/45 ml <br>
+                                        ⋆ Alto contenido de cafeína <br>
+                                        ⚬ Calorías (kcal): 345 <br>
+                                        ⚬ Sodio (mg): 127,50 <br>
+                                        ⚬ Carbohidratos (g): 62.00 <br>
+                                        ⚬ Azúcar (g): 39,00 <br>
+                                        ⚬ Grasas (g): 9,00 <br>
+                                        ⚬ Grasas saturadas (g): 5,00 <br>
+                                        ⚬ Proteínas (g): 3,00</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Kano masticable</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/combo3.jpg" class="card-img-top">
+                            
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Hanzel y Pretzel</h4>
+                                    <p style="font-size: x-small;"> ⚬ Ingredientes: Té helado + mini pretzels <br>
+                                        ⚬ Capacidad: Bebida (591 ml) + Topping (50 g) <br>
+                                        ⚬ Cafeína (mg): 20,00 <br>
+                                        ⚬ Calorías (kcal): 446.00 <br>
+                                        ⚬ Sodio (mg): 518.00 <br>
+                                        ⚬ Carbohidratos (g): 82,50 <br>
+                                        ⚬ Azúcar (g): 50,50 <br>
+                                        ⚬ Grasas (g): 11,00 <br>
+                                        ⚬ Grasas saturadas (g): 5,00 <br>
+                                        ⚬ Proteínas (g): 4,00</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Hansel y Pretzel</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/combo4.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">El café combina mejor con pan de café.</h4>
+                                    <p style="font-size: x-small;"> ⚬ Composición: Americano helado + Pan de grano de café <br>
+                                        ⚬ Capacidad: Bebida (591 ml) + Topping (100 g) <br>
+                                        ⚬ Cafeína - 2 dosis: 156 mg/45 ml <br>
+                                        ⋆ Alto contenido de cafeína <br>
+                                        ⚬ Calorías (kcal): 406.00 <br>
+                                        ⚬ Sodio (mg): 397,50 <br>
+                                        ⚬ Carbohidratos (g): 61,50 <br>
+                                        ⚬ Azúcar (g): 27,50 <br>
+                                        ⚬ Grasas (g): 14,25 <br>
+                                        ⚬ Grasas saturadas (g): 4,50 <br>
+                                        ⚬ Proteínas (g): 7,25</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">El café combina mejor con pan de café</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/combo5.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Melodrama Shake</h4>
+                                    <p style="font-size: x-small;"> ⚬ Composición: Batido de café + malvavisco de chocolate <br>
+                                        ⚬ Capacidad: Bebida (591 ml) + Aderezo (10,5 g) <br>
+                                        ⚬ Cafeína - 2 dosis: 156 mg/45 ml <br>
+                                        ⋆ Alto contenido de cafeína <br>
+                                        ⚬ Calorías (kcal): 610 <br>
+                                        ⚬ Sodio (mg): 336,55 <br>
+                                        ⚬ Carbohidratos (g): 82.00 <br>
+                                        ⚬ Azúcar (g): 57,70 <br>
+                                        ⚬ Grasas (g): 57,70 <br>
+                                        ⚬ Grasas saturadas (g): 21,16 <br>
+                                        ⚬ Proteínas (g): 6,80</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Melodrama Shake</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/combo6.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">El café con leche es matcha</h4>
+                                    <p style="font-size: x-small;"> ⚬ Composición: Café Latte Helado + Palomitas de Maíz Matcha <br>
+                                        ⚬ Capacidad: Bebida (591 ml) + Aderezo (38 g) <br>
+                                        ⚬ Cafeína - 2 dosis: 208 mg <br>
+                                        ⋆ Alto contenido de cafeína <br>
+                                        ⚬ Calorías (kcal): 345.00 <br>
+                                        ⚬ Sodio (mg): 257,50 <br>
+                                        ⚬ Carbohidratos (g): 41.00 <br>
+                                        ⚬ Azúcar (g): 26,00 <br>
+                                        ⚬ Grasas (g): 16,00 <br>
+                                        ⚬ Grasas saturadas (g): 9,60 <br>
+                                        ⚬ Proteínas (g): 7,00</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">El café con leche es matcha</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="temporada">
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/temporada1.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de yogur de chocolate</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591.00 <br>
+                                        ⚬ Calorías (kcal): 528,87 <br>
+                                        ⚬ Sodio (mg): 152,43 <br>
+                                        ⚬ Carbohidratos (g): 274,91 <br>
+                                        ⚬ Azúcar (g): 64,73 <br>
+                                        ⚬ Grasas (g): 30,62 <br>
+                                        ⚬ Grasas saturadas (g): 17,51 <br>
+                                        ⚬ Proteínas (g): 7,19</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de yogurt de chocolate</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/temporada2.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Té de ciruela ICE</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591.00 <br>
+                                        ⚬ Calorías (kcal): 242,26 <br>
+                                        ⚬ Sodio (mg): 26,05 <br>
+                                        ⚬ Carbohidratos (g): 59,84 <br>
+                                        ⚬ Azúcar (g): 44,18 <br>
+                                        ⚬ Grasas (g): 0,18 <br>
+                                        ⚬ Grasas saturadas (g): 0,01 <br>
+                                        ⚬ Proteínas (g): 0,31</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Té de ciruela ICE</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/temporada3.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Latte de chocolate crudo nocturno ICE Buyeo</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591.00 <br>
+                                        ⚬ Cafeína (mg): 1,83 <br>
+                                        ⚬ Calorías (kcal): 691,56 <br>
+                                        ⚬ Sodio (mg): 218,16 <br>
+                                        ⚬ Carbohidratos (g): 79,15 <br>
+                                        ⚬ Azúcar (g): 56,07 <br>
+                                        ⚬ Grasas (g): 38,62 <br>
+                                        ⚬ Grasas saturadas (g): 30,90 <br>
+                                        ⚬ Proteínas (g): 6,33</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Latte de chocolate crudo nocturno ICE Buyeo</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/temporada4.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">ICE Ricci Allegro</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591.00 <br>
+                                        ⚬ Calorías (kcal): 142.00 <br>
+                                        ⚬ Sodio (mg): 16,90 <br>
+                                        ⚬ Carbohidratos (g): 35,20 <br>
+                                        ⚬ Azúcar (g): 29,50 <br>
+                                        ⚬ Grasas (g): 0,10 <br>
+                                        ⚬ Grasas saturadas (g): 0,00 <br>
+                                        ⚬ Proteínas (g): 0,10</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">ICE Ricci Allegro</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/temporada5.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">ICE Yuzastaccato</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 333,20 <br>
+                                        ⚬ Sodio (mg): 66,40 <br>
+                                        ⚬ Carbohidratos (g): 82,60 <br>
+                                        ⚬ Azúcar (g): 78,90 <br>
+                                        ⚬ Grasas (g): 0,30 <br>
+                                        ⚬ Grasas saturadas (g): 0,10 <br>
+                                        ⚬ Proteínas (g): 0,50</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">ICE Yuzastaccato</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/temporada6.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">ICE Dolce Serenata</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Cafeína (mg): 156 <br>
+                                        ⚬ Calorías (kcal): 602,6 <br>
+                                        ⚬ Sodio (mg): 219,9 <br>
+                                        ⚬ Carbohidratos (g): 111,20 <br>
+                                        ⚬ Azúcar (g): 51,00 <br>
+                                        ⚬ Grasas (g): 11,40 <br>
+                                        ⚬ Grasas saturadas (g): 9,40 <br>
+                                        ⚬ Proteínas (g): 4,20</p> 
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+                                
+                            <div class="card-body">
+                                <h5 class="card-title">ICE Dolce Serenata</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="latte">
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/latte1.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Latte de chocolate crudo y fresa</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 598,3 <br>
+                                        ⚬ Sodio (mg): 143,4 <br>
+                                        ⚬ Carbohidratos (g): 63,4 <br>
+                                        ⚬ Azúcar (g): 57,9 <br>
+                                        ⚬ Grasas (g): 34,7 <br>
+                                        ⚬ Grasas saturadas (g): 25,6 <br>
+                                        ⚬ Proteínas (g): 7,5</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Latte de chocolate crudo y fresa</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/latte2.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Latte de chocolate crudo</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 518,7 <br>
+                                        ⚬ Sodio (mg): 152,8 <br>
+                                        ⚬ Carbohidratos (g): 79.0 <br>
+                                        ⚬ Azúcar (g): 37,2 <br>
+                                        ⚬ Grasas (g): 31,2 <br>
+                                        ⚬ Grasas saturadas (g): 25,1 <br>
+                                        ⚬ Proteínas (g): 8,4</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Latte de chocolate crudo</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/latte3.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Latte de doble chocolate ICE</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 399,2 <br>
+                                        ⚬ Sodio (mg): 163,4 <br>
+                                        ⚬ Carbohidratos (g): 47,2 <br>
+                                        ⚬ Azúcar (g): 34,6 <br>
+                                        ⚬ Grasas (g): 18,3 <br>
+                                        ⚬ Grasas saturadas (g): 15,1 <br>
+                                        ⚬ Proteínas (g): 8</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Latte de doble chocolate ICE</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/latte4.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Latte de chocolate doble CALIENTE</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 388 <br>
+                                        ⚬ Sodio (mg): 174,1 <br>
+                                        ⚬ Carbohidratos (g): 52,8 <br>
+                                        ⚬ Azúcar (g): 38,9 <br>
+                                        ⚬ Grasas (g): 19,1 <br>
+                                        ⚬ Grasas saturadas (g): 15,7 <br>
+                                        ⚬ Proteínas (g): 8,7</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Latte de chocolate doble CALIENTE</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/latte5.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Latte de batata ICE</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 363 <br>
+                                        ⚬ Sodio (mg): 110 <br>
+                                        ⚬ Carbohidratos (g): 63 <br>
+                                        ⚬ Azúcar (g): 37 <br>
+                                        ⚬ Grasas (g): 8,9 <br>
+                                        ⚬ Grasas saturadas (g): 6 <br>
+                                        ⚬ Proteínas (g): 7</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Latte de batata ICE</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/latte6.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Leche con azúcar morena (leche)</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 371 <br>
+                                        ⚬ Sodio (mg): 141,2 <br>
+                                        ⚬ Carbohidratos (g): 48,5 <br>
+                                        ⚬ Azúcar (g): 44,9 <br>
+                                        ⚬ Grasas (g): 10 <br>
+                                        ⚬ Grasas saturadas (g): 6,75 <br>
+                                        ⚬ Proteínas (g): 7,5</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Leche con azúcar morena (leche)</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="frappe">
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">   
+                                <img src="imagen/frappes1.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de yogur de fresa</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 437,3 <br>
+                                        ⚬ Sodio (mg): 152,33 <br>
+                                        ⚬ Carbohidratos (g): 84,81 <br>
+                                        ⚬ Azúcar (g): 82,1 <br>
+                                        ⚬ Grasas (g): 8,3 <br>
+                                        ⚬ Grasas saturadas (g): 4,59 <br>
+                                        ⚬ Proteínas (g): 5,1</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de yogur de fresa</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/frappes2.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de arándanos</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 314,09 <br>
+                                        ⚬ Sodio (mg): 119,59 <br>
+                                        ⚬ Carbohidratos (g): 61,05 <br>
+                                        ⚬ Azúcar (g): 54,13 <br>
+                                        ⚬ Grasas (g): 5,6 <br>
+                                        ⚬ Grasas saturadas (g): 3,78 <br>
+                                        ⚬ Proteínas (g): 4,2.</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de arándanos</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/frappes3.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de Yuzu</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 268 <br>
+                                        ⚬ Sodio (mg): 171,9 <br>
+                                        ⚬ Carbohidratos (g): 66,6 <br>
+                                        ⚬ Azúcar (g): 57,1</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de Yuzu</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/frappes4.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Frappé de moca y chips de Java</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Cafeína - 2 dosis: 156 mg/45 ml <br>
+                                        ⋆ Alto contenido de cafeína <br>
+                                        ⚬ Calorías (kcal): 555,4 <br>
+                                        ⚬ Sodio (mg): 172,69 <br>
+                                        ⚬ Carbohidratos (g): 73,9 <br>
+                                        ⚬ Azúcar (g): 53,1 <br>
+                                        ⚬ Grasas (g): 22,9 <br>
+                                        ⚬ Grasas saturadas (g): 15,6 <br>
+                                        ⚬ Proteínas (g): 6,2</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Frappé de moca y chips de Java</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/frappes5.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Frappé de té verde</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Cafeína (mg): 193 <br>
+                                        ⋆ Alto contenido de cafeína <br>
+                                        ⚬ Calorías (kcal): 518,8 <br>
+                                        ⚬ Sodio (mg): 118,34 <br>
+                                        ⚬ Carbohidratos (g): 96,4 <br>
+                                        ⚬ Azúcar (g): 64,2 <br>
+                                        ⚬ Grasas (g): 18,64 <br>
+                                        ⚬ Grasas saturadas (g): 12 <br>
+                                        ⚬ Proteínas (g): 6,78</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Frappé de té verde</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/frappes6.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Frappé con chispas de chocolate y java real</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 575,4 <br>
+                                        ⚬ Sodio (mg): 190,19 <br>
+                                        ⚬ Carbohidratos (g): 73,4 <br>
+                                        ⚬ Azúcar (g): 55,6 <br>
+                                        ⚬ Grasas (g): 24,9 <br>
+                                        ⚬ Grasas saturadas (g): 17 <br>
+                                        ⚬ Proteínas (g): 7,74</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Frappé con chispas de chocolate y java real</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="batido">
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/batido1.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h style="font-size: small;">Batido de mochi de fresa</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 843 <br>
+                                        ⚬ Sodio (mg): 405,66 <br>
+                                        ⚬ Carbohidratos (g): 115,93 <br>
+                                        ⚬ Azúcar (g): 103,08 <br>
+                                        ⚬ Grasas (g): 27,90 <br>
+                                        ⚬ Grasas saturadas (g): 22,32 <br>
+                                        ⚬ Proteínas (g): 4,39</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de mochi de fresa</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/batido2.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Copa Injeolmi Bing</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 655,18 <br>
+                                        ⚬ Sodio (mg): 74,88 <br>
+                                        ⚬ Carbohidratos (g): 137,66 <br>
+                                        ⚬ Azúcar (g): 93,69 <br>
+                                        ⚬ Grasas (g): 7,80 <br>
+                                        ⚬ Grasas saturadas (g): 4,84 <br>
+                                        ⚬ Proteínas (g): 8,87</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Copa Injeolmi Bing</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/batido3.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de galletas</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 671,6 <br>
+                                        ⚬ Sodio (mg): 391,7 <br>
+                                        ⚬ Carbohidratos (g): 93.0 <br>
+                                        ⚬ Azúcar (g): 62,3 <br>
+                                        ⚬ Grasas (g): 30,25 <br>
+                                        ⚬ Grasas saturadas (g): 21,19 <br>
+                                        ⚬ Proteínas (g): 6,63</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de galletas</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/batido4.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de frijoles rojos</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 704 <br>
+                                        ⚬ Sodio (mg): 372,7 <br>
+                                        ⚬ Carbohidratos (g): 108,6 <br>
+                                        ⚬ Azúcar (g): 78,5 <br>
+                                        ⚬ Grasas (g): 25,34 <br>
+                                        ⚬ Grasas saturadas (g): 19,1 <br>
+                                        ⚬ Proteínas (g): 9,2</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de frijoles rojos</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/batido5.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de soda de caramelo</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 583,6 <br>
+                                        ⚬ Sodio (mg): 296,21 <br>
+                                        ⚬ Carbohidratos (g): 79,84 <br>
+                                        ⚬ Azúcar (g): 58,61 <br>
+                                        ⚬ Grasas (g): 26,92 <br>
+                                        ⚬ Grasas saturadas (g): 20,28 <br>
+                                        ⚬ Proteínas (g): 5,46</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de soda de caramelo</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/batido6.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Batido de café</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Cafeína - 2 dosis: 156 mg/45 ml <br>
+                                        ⋆ Alto contenido de cafeína <br>
+                                        ⚬ Calorías (kcal): 565 <br>
+                                        ⚬ Sodio (mg): 331,5 <br>
+                                        ⚬ Carbohidratos (g): 74 <br>
+                                        ⚬ Azúcar (g): 51,7 <br>
+                                        ⚬ Grasas (g): 26,9 <br>
+                                        ⚬ Grasas saturadas (g): 19,86 <br>
+                                        ⚬ Proteínas (g): 5,8</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Batido de café</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="jugos">
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/jugo1.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Ade especial de maracuyá</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 226 <br>
+                                        ⚬ Sodio (mg): 56,5 <br>
+                                        ⚬ Carbohidratos (g): 56,5 <br>
+                                        ⚬ Azúcar (g): 55,5.</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Ade especial de maracuyá</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/jugo2.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Pomelo aderezado</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 175,6 <br>
+                                        ⚬ Sodio (mg): 9,9 <br>
+                                        ⚬ Carbohidratos (g): 43,9 <br>
+                                        ⚬ Azúcar (g): 42,2</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Pomelo aderezado</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/jugo3.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Limonada</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 178,8 <br>
+                                        ⚬ Sodio (mg): 8,5 <br>
+                                        ⚬ Carbohidratos (g): 44,7 <br>
+                                        ⚬ Azúcar (g): 43,8</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Limonada</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/jugo4.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Mangoade</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 181,9 <br>
+                                        ⚬ Sodio (mg): 20,2 <br>
+                                        ⚬ Carbohidratos (g): 45,6 <br>
+                                        ⚬ Azúcar (g): 39,4</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Mangoade</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/jugo5.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Zumo de fresa casero</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 495 <br>
+                                        ⚬ Sodio (mg): 135 <br>
+                                        ⚬ Carbohidratos (g): 78 <br>
+                                        ⚬ Azúcar (g): 78 <br>
+                                        ⚬ Grasas (g): 14 <br>
+                                        ⚬ Proteínas (g): 6</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Zumo de fresa casero</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center card-info">
+                            <div class="img-wrapper">
+                                <img src="imagen/jugo6.jpg" class="card-img-top">
+
+                                <!-- OVERLAY -->
+                                <div class="info-overlay">
+                                    <h4 style="font-size: small;">Ade especial de limón azul</h4>
+                                    <p style="font-size: x-small;"> ⚬ Capacidad: 591 ml (20 oz) <br>
+                                        ⚬ Calorías (kcal): 161,6 <br>
+                                        ⚬ Sodio (mg): 8 <br>
+                                        ⚬ Carbohidratos (g): 40,4 <br>
+                                        ⚬ Azúcar (g): 39,6</p>
+                                    <button class="btn btn-sm btn-dark cerrar-info">Cerrar</button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Ade especial de limón azul</h5>
+                                <a style="background-color: brown; border: brown;" href="#" class="btn btn-primary btn-sm ver-info">Ver información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="margin-top: 60px;">
+        <div class="container footer-flex">
+
+            <!-- TEXTO IZQUIERDA (independiente) -->
+            <p class="texto-izquierda">
+                Curso de Diseño y Desarrollo Web
+            </p>
+
+            <!-- TEXTO CENTRO -->
+            <p class="texto-centro">
+                Evaluación Integral Isil © 2025-II
+            </p>
+
+            <!-- ICONOS IZQUIERDA -->
+            <div id="iconos">
+                <a href="https://www.instagram.com/compose_coffee/"><img src="imagen/icon1.png" alt="icon1"></a>
+                <a href="https://apps.apple.com/kr/app/%EC%BB%B4%ED%8F%AC%EC%A6%88%EC%BB%A4%ED%94%BC/id6742086811"><img src="imagen/icon2.png" alt="icon2"></a>
+                <a href="https://play.google.com/store/apps/details?id=ci.dvn.composecoffee.app"><img src="imagen/icon3.png" alt="icon3"></a>
+                <a href="https://composecoffee.synology.me:3334/#/signin"><img src="imagen/icon4.png" alt="icon4"></a>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll(".ver-info").forEach(btn => {
+                btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const card = this.closest(".card-info");
+                    card.querySelector(".info-overlay").classList.add("activo");
+                });
+            });
+
+            document.querySelectorAll(".cerrar-info").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    this.closest(".info-overlay").classList.remove("activo");
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
