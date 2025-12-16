@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <title>Noticias | Compose Coffee</title>
   <link rel="stylesheet" href="estilo.css">
-  <!-- Bootstrap CSS -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
-  <!-- Favicon -->
+
     <link rel="shortcut icon" href="imagen/790852d50c38093de194f6812c293d68d3bf1ab8b40ef405a391f2add378072b_1719894440052977[1].png" type="image/x-icon">
   <style>
         body {
             background-color: #fdf6f0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-y: auto;
-            padding-bottom: 140px; /* un poco más que la altura del footer */
+            padding-bottom: 140px; 
         }
         .navbar {
             background-color: #6f4e37;
@@ -65,23 +65,18 @@
             font-size: xxx-large;
         }
 
-
-        /* Quitar azul de Bootstrap */
-/* 🔹 Estilo base: todos sin color */
         .accordion-button {
         background-color: white;
         color: #ad1f1a;
         border: 2px solid darkred;
         }
 
-        /* 🟣 PRIMER botón con morado claro al inicio */
         .accordion-item:first-child .accordion-button.collapsed {
-        background-color: #fcaeaa; /* morado claro */
+        background-color: #fcaeaa; 
         }
 
-        /* 🟪 Cuando un botón está ABIERTO (clickeado) */
         .accordion-button:not(.collapsed) {
-        background-color: #ce624f; /* morado más fuerte */
+        background-color: #ce624f; 
         color: white;
         }
 
@@ -90,7 +85,6 @@
           font-weight: bold;
         }
 
-/* --- Estilos generales --- */
 body {
     background-color: #fdf6f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -108,15 +102,11 @@ body {
 .tab-content .badge { font-size: 0.85rem; }
 .accordion-button { font-size: 1rem; }
 
-/* --- Columnas --- */
+
 .col-md-8, .col-md-4 { flex: 0 0 auto; max-width: 100%; }
 
-/* --- Footer --- */
 footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-color: #6f4e37; color: white; padding: 15px 0; z-index: 1000; }
 
-/* --- Media Queries --- */
-
-/* Pantallas medianas (≤992px) */
 @media (max-width: 992px) {
     #nosotros { font-size: 2.5rem; }
     #mini1 { font-size: 1.3rem; }
@@ -126,7 +116,6 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
     .col-md-8, .col-md-4 { flex: 0 0 100%; max-width: 100%; margin-bottom: 1rem; }
 }
 
-/* Pantallas pequeñas (≤768px) */
 @media (max-width: 768px) {
     #nosotros { font-size: 2rem; }
     #mini1 { font-size: 1.2rem; }
@@ -135,7 +124,6 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
     .accordion-button { font-size: 0.9rem; padding: 0.45rem 0.8rem; }
 }
 
-/* Pantallas muy pequeñas (≤576px) */
 @media (max-width: 576px) {
     #nosotros { font-size: 1.5rem; }
     #mini1 { font-size: 1rem; }
@@ -174,12 +162,11 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
   <div class="container my-5 contenido-principal">
     <h2 id="nosotros" style="text-align: center;">Novedades y Preguntas</h2>
       <div class="row">
-        <!-- COLUMNA IZQUIERDA -->
+        
         <div class="col-md-8">
 
           <h4 id="mini1" class="mb-3">Anuncios Categorizados</h4>
 
-          <!-- TABS -->
           <ul class="nav nav-tabs mb-3" role="tablist">
 
             <li class="nav-item">
@@ -215,10 +202,8 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
           </ul>
 
 
-          <!-- CONTENIDO TABS -->
           <div class="tab-content">
 
-            <!-- TODAS -->
             <div class="tab-pane fade show active" id="all">
               <div class="alert alert-light border-start border-4 border-secondary bg-opacity-25" style="font-size: medium;">
                 <span class="tag compose">[Compose Coffee]</span>
@@ -246,7 +231,7 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
               </div>
             </div>
 
-            <!-- COMPOSE COFFEE -->
+
             <div class="tab-pane fade" id="compose">
               <div class="alert alert-light border-start border-4 border-secondary bg-opacity-25">
                 Se lanza la Asociación de Propietarios de Compose Coffee... "Estamos creciendo hasta alcanzar los 700 miembros".
@@ -256,7 +241,7 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
               </div>
             </div>
 
-            <!-- V BTS -->
+
             <div class="tab-pane fade" id="bts">
               <div class="alert alert-light border-start border-4 border-success bg-opacity-25">
                 Compose Coffee presenta su nueva campaña publicitaria con V de BTS..."Coffee Like Coffee".
@@ -266,7 +251,7 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
               </div>
             </div>
 
-            <!-- MAQUINAS -->
+
             <div class="tab-pane fade" id="machines">
               <div class="alert alert-light border-start border-4 border-warning bg-opacity-25">
                 Compose Coffee abre el centro de capacitación para franquiciados más grande de la industria.
@@ -279,13 +264,10 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
         </div>
     
 
-        <!-- COLUMNA DERECHA -->
         <div class="col-md-4">
 
-          <!-- TÍTULO INDEPENDIENTE -->
           <h5 id="mini1" class="mb-3">Preguntas frecuentes</h5>
 
-          <!-- ACORDEÓN -->
           <div class="accordion" id="faqAccordion">
 
             <div class="accordion-item">
@@ -348,17 +330,14 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
 <footer>
         <div class="container footer-flex">
 
-            <!-- TEXTO IZQUIERDA (independiente) -->
             <p class="texto-izquierda">
                 Curso de Diseño y Desarrollo Web
             </p>
 
-            <!-- TEXTO CENTRO -->
             <p class="texto-centro">
                 Evaluación Integral Isil © 2025-II
             </p>
 
-            <!-- ICONOS IZQUIERDA -->
             <div id="iconos">
                 <a href="https://www.instagram.com/compose_coffee/"><img src="imagen/icon1.png" alt="icon1"></a>
                 <a href="https://apps.apple.com/kr/app/%EC%BB%B4%ED%8F%AC%EC%A6%88%EC%BB%A4%ED%94%BC/id6742086811"><img src="imagen/icon2.png" alt="icon2"></a>
@@ -369,8 +348,8 @@ footer { position: fixed; bottom: 0; width: 100%; height: 120px; background-colo
         </div>
     </footer>
 
-<!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
